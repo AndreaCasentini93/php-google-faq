@@ -117,6 +117,24 @@
             "active" => true
         ]
     ];
+    $info = [
+        [
+            "text" => "Google",
+            "url" => "#",
+        ],
+        [
+            "text" => "Tutto su Google",
+            "url" => "#",
+        ],
+        [
+            "text" => "Privacy",
+            "url" => "#",
+        ],
+        [
+            "text" => "Termini",
+            "url" => "#",
+        ]
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -130,7 +148,7 @@
         <!-- FONTS GOOGLE -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;500;700&display=swap" rel="stylesheet">
         <!-- FONTAWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- STYLE CSS -->
@@ -211,7 +229,29 @@
 
         <!-- FOOTER -->
         <footer>
-            <i class="fas fa-comment-alt"></i>
+            <div class="container">
+                <div>
+                    <ul>
+                    <?php foreach ($info as $link) { ?>
+
+                        <li>
+                            <a href="<?= $link['text']; ?>">
+                                <?= $link["text"]; ?>
+                            </a>
+                        </li>
+
+                    <?php } ?>
+                    </ul>
+                </div>
+                <div>
+                    <i class="fas fa-comment-alt"></i>
+                    <select name="language" id="language">
+                        <option value="it">Italiano</option>
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
         </footer>
         <!-- /FOOTER -->
     </body>
