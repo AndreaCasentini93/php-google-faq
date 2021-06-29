@@ -90,6 +90,35 @@
             ]
         ]
     ];
+
+    // MENU
+    $menu = [
+        [
+            "text" => "Introduzione",
+            "url" => "#",
+            "active" => false
+        ],
+        [
+            "text" => "Norme sulla privacy",
+            "url" => "#",
+            "active" => false
+        ],
+        [
+            "text" => "Termini di servizio",
+            "url" => "#",
+            "active" => false
+        ],
+        [
+            "text" => "Tecnologie",
+            "url" => "#",
+            "active" => false
+        ],
+        [
+            "text" => "Domande frequenti",
+            "url" => "#",
+            "active" => true
+        ]
+    ];
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +144,38 @@
     <body>
         <!-- HEADER -->
         <header>
+            <!-- LOGO AND TITLE -->
+            <div class="logo_title">
+                <div>
+                    <a href="#">
+                        <img src="img/google-logo.png" alt="logo">
+                    </a>
+                    <span>Privacy e termini</span>
+                </div>
+                <div>
+                    <svg class="gb_Ve image_menu" focusable="false" viewBox="0 0 24 24" fill="#5F6368">
+                        <path d="M6,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM6,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM12,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM16,6c0,1.1 0.9,2 2,2s2,-0.9 2,-2 -0.9,-2 -2,-2 -2,0.9 -2,2zM12,8c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,14c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2zM18,20c1.1,0 2,-0.9 2,-2s-0.9,-2 -2,-2 -2,0.9 -2,2 0.9,2 2,2z"></path>
+                    </svg>
+                    <img class="image_menu" src="img/letter-a.png" alt="profile">
+                </div>
+            </div>
+            <!-- /LOGO AND TITLE -->
 
+            <!-- NAVIGATION BAR -->
+            <nav>
+                <ul>
+                <?php foreach ($menu as $link) { ?>
+                    <li class="<?php if($link['active']) {
+                        echo 'active';
+                    } ?>">
+                        <a href="<?= $link['url']; ?>">
+                            <?= $link["text"]; ?>
+                        </a>
+                    </li>
+                <?php } ?>
+                </ul>
+            </nav>
+            <!-- /NAVIGATION BAR -->
         </header>
         <!-- /HEADER -->
 

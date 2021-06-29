@@ -11,6 +11,13 @@ body {
     color: #3C4043;
 }
 
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+
 /* HEADER */
 header {
     position: fixed;
@@ -18,8 +25,57 @@ header {
     left: 0;
     width: 100%;
     height: 90px;
+    padding: 8px 15px;
     border-bottom: 1px solid #f2737383;
     background-color: #ffffff;
+}
+
+.logo_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_title span {
+    font-size: 20px;
+    color: #69636D;
+}
+
+.logo_title .image_menu {
+    width: 33px;
+    vertical-align: middle;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.logo_title img {
+    width: 80px;
+    vertical-align: middle;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-right: 35px;
+    padding-bottom: 11px;
+    border-bottom: 3px solid #ffffff00;
+}
+nav li.active {
+    border-bottom: 3px solid #3367D9;
+}
+nav li.active a {
+    color: #3367D9;
+}
+
+nav a {
+    font-size: 15px;
+    color: #69636D;
+}
+nav a:hover {
+    color: #69636D;
 }
 
 /* MAIN */
@@ -45,11 +101,9 @@ main p {
 }
 
 main a {
-    text-decoration: none;
     color: #3367D9;
 }
 main a:hover {
-    text-decoration: none;
     color: #3367D9;
 }
 
