@@ -1,5 +1,4 @@
 <?php
-
     /*
     Riscrivere questa pagina del sito google: https://policies.google.com/faq. Ci sono diverse domande con relative risposte. Gestire il "Database" e la visualizzazione di queste domande e risposte con PHP.
     */
@@ -91,7 +90,6 @@
             ]
         ]
     ];
-
 ?>
 
 <!DOCTYPE html>
@@ -100,6 +98,12 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        FAVICON
+        <link rel="shortcut icon" href="" type="image/x-icon">
+        <!-- FONTS GOOGLE -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
         <!-- STYLE CSS -->
         <link rel="stylesheet" href="css/style.css">
         <!-- TITLE -->
@@ -108,7 +112,9 @@
 
     <body>
         <!-- HEADER -->
-        <header></header>
+        <header>
+
+        </header>
         <!-- /HEADER -->
 
         <!-- MAIN -->
@@ -144,7 +150,9 @@
         <!-- /MAIN -->
 
         <!-- FOOTER -->
-        <footer></footer>
+        <footer>
+
+        </footer>
         <!-- /FOOTER -->
     </body>
 </html>
