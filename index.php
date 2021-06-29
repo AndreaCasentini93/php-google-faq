@@ -92,8 +92,6 @@
         ]
     ];
 
-    var_dump($questions);
-
 ?>
 
 <!DOCTYPE html>
@@ -106,6 +104,52 @@
     </head>
 
     <body>
-        
+        <!-- HEADER -->
+        <header></header>
+        <!-- /HEADER -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="container">
+            <?php foreach ($questions as $single_question) { ?>
+
+                <section>
+                    <h2>
+                    <?php
+                        echo $single_question["question"];
+                    ?>
+                    </h2>
+
+                    <?php
+                        foreach ($single_question["answers"] as $answer) {
+                    ?>
+                        <p><?= $answer; ?></p>
+                    <?php } ?>
+
+                    <h3>
+                    <?php
+                        if (!empty($single_question["answers_subtitle"])) {
+                            echo $single_question["answers_subtitle"];
+                        }
+                    ?>
+                    </h3>
+
+                    <?php
+                        if (!empty($single_question["below_answers"])) {
+                            foreach ($single_question["below_answers"] as $below_answer) {
+                    ?>
+                        <p><?= $below_answer; ?></p>
+                    <?php }} ?>
+
+                </section>
+
+            <?php } ?>
+            </div>
+        </main>
+        <!-- /MAIN -->
+
+        <!-- FOOTER -->
+        <footer></footer>
+        <!-- /FOOTER -->
     </body>
 </html>
