@@ -90,8 +90,6 @@
             ]
         ]
     ];
-
-    // MENU
     $menu = [
         [
             "text" => "Introduzione",
