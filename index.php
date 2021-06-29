@@ -47,11 +47,11 @@
                 <ol>
                     <li>
                     La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
-                        <ul>
+                        <ol class=\"lower_alpha\">
                             <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.</li>
 
                             <li>Google LLC, con sede negli Stati Uniti, per il resto del mondo.</li>
-                        </ul>
+                        </ol>
                     </li>
                     <li>La versione dei termini che regola il nostro rapporto, che può variare in base alle leggi locali.</li>
                 </ol>",
@@ -115,30 +115,22 @@
 
                 <section>
                     <h2>
-                    <?php
-                        echo $single_question["question"];
-                    ?>
+                    <?php echo $single_question["question"]; ?>
                     </h2>
 
-                    <?php
-                        foreach ($single_question["answers"] as $answer) {
-                    ?>
+                    <?php foreach ($single_question["answers"] as $answer) { ?>
                         <p><?= $answer; ?></p>
                     <?php } ?>
 
                     <h3>
-                    <?php
-                        if (!empty($single_question["answers_subtitle"])) {
+                    <?php if (!empty($single_question["answers_subtitle"])) {
                             echo $single_question["answers_subtitle"];
-                        }
-                    ?>
+                        } ?>
                     </h3>
 
-                    <?php
-                        if (!empty($single_question["below_answers"])) {
-                            foreach ($single_question["below_answers"] as $below_answer) {
-                    ?>
-                        <p><?= $below_answer; ?></p>
+                    <?php if (!empty($single_question["below_answers"])) {
+                        foreach ($single_question["below_answers"] as $below_answer) { ?>
+                            <p><?= $below_answer; ?></p>
                     <?php }} ?>
 
                 </section>
