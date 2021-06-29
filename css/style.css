@@ -68,8 +68,7 @@ nav li {
     padding-bottom: 11px;
     border-bottom: 3px solid #ffffff00;
 }
-nav li.active,
-nav li:hover {
+nav li.active {
     border-bottom: 3px solid #3367D9;
 }
 nav li.active a {
@@ -82,7 +81,7 @@ nav a {
     transition: color .3s linear;
 }
 nav a:hover {
-    color: #3367D9;
+    color: #69636D;
 }
 
 /* MAIN */
