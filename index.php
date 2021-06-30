@@ -200,8 +200,8 @@
             <div class="container">
             <?php foreach ($questions as $single_question) { ?>
                 <section>
-                
-                    <h2><?php echo $single_question["question"]; ?></h2>
+
+                    <h2><?= $single_question["question"]; ?></h2>
 
                     <?php foreach ($single_question["answers"] as $answer) { ?>
                         <p><?= $answer; ?></p>
