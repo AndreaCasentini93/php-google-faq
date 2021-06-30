@@ -209,11 +209,9 @@
                         <p><?= $answer; ?></p>
                     <?php } ?>
 
-                    <h3>
-                    <?php if (!empty($single_question["answers_subtitle"])) {
-                            echo $single_question["answers_subtitle"];
-                        } ?>
-                    </h3>
+                    <?php if (!empty($single_question["answers_subtitle"])) { ?>
+                        <h3><?= $single_question["answers_subtitle"]; ?></h3>
+                    <?php } ?>
 
                     <?php if (!empty($single_question["below_answers"])) {
                         foreach ($single_question["below_answers"] as $below_answer) { ?>
