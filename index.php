@@ -235,7 +235,7 @@
                     <?php foreach ($info as $link) { ?>
 
                         <li>
-                            <a href="<?= $link['text']; ?>">
+                            <a href="<?= $link['url']; ?>">
                                 <?= $link["text"]; ?>
                             </a>
                         </li>
